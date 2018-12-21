@@ -9,9 +9,9 @@ import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText regNoEditText ;
-    EditText passwordEditText ;
-    Button loginButton;
+    private EditText regNoEditText;
+    private EditText passwordEditText;
+    private Button loginButton;
 
 
     @Override

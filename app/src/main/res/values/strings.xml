@@ -3,4 +3,11 @@
     <string name="login"> Login</string>
     <string name="regNo">Username</string>
     <string name="password">Password</string>
+    <string name="welcome"> Welcome to Shule Tanzania</string>
+    <string name="shuta">
+    Shule Tanzania (Shuta) holds all the information relating to students and their studies (registering course online, View course result and progress and
+    allows Staffs to manage their management task on line i.e viewing List of Student per course,publishing
+    course  result and tracking student progress </string>
+    <string name="copyright">Copyright &#169; Shule Tanzania @2018 </string>
+    <string name="developer">Linyule Marigito J</string>
 </resources>
