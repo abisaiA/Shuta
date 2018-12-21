@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class LoadingActivity extends AppCompatActivity {
 
@@ -20,6 +21,19 @@ public class LoadingActivity extends AppCompatActivity {
         initialize();
 
         firstLayout.setAnimation(uptodown);
+
+        if (regNo.equals("marigito") && password.equals("123456")) {
+
+            Toast.makeText(getApplicationContext(), "successful login", Toast.LENGTH_LONG).show();
+
+        } else {
+
+            Toast.makeText(getApplicationContext(), "UNAZINGUA KIJANA", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+            finish();
+
+        }
 
     }
 
