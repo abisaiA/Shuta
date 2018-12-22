@@ -1,6 +1,8 @@
 package com.example.marigito.shuta;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
@@ -13,28 +15,37 @@ public class LoadingActivity extends AppCompatActivity {
     private String regNo, password;
     private LinearLayout firstLayout, secondLayout;
     private Animation uptodown;
+    private Intent intent;
 
     @Override
-    public void onCreate(Bundle savedInstanceBundle) {
+    protected void onCreate(Bundle savedInstanceBundle) {
         super.onCreate(savedInstanceBundle);
         setContentView(R.layout.activity_loading);
         initialize();
 
         firstLayout.setAnimation(uptodown);
 
+
+        new MysBack().execute(LoadingActivity.this);
+
+    }
+
+    private void runL(Context context) {
         if (regNo.equals("marigito") && password.equals("123456")) {
 
-            Toast.makeText(getApplicationContext(), "successful login", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "successful login", Toast.LENGTH_LONG).show();
+            intent = new Intent(LoadingActivity.this, StudentHomePageActivity.class);
+            startActivity(intent);
+            finish();
 
         } else {
 
-            Toast.makeText(getApplicationContext(), "UNAZINGUA KIJANA", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            Toast.makeText(context, "UNAZINGUA KIJANA", Toast.LENGTH_LONG).show();
+            intent = new Intent(getApplicationContext(), LecturerHomePageView.class);
             startActivity(intent);
             finish();
 
         }
-
     }
 
     public void initialize() {
@@ -45,5 +56,25 @@ public class LoadingActivity extends AppCompatActivity {
         firstLayout = findViewById(R.id.first_layout);
         secondLayout = findViewById(R.id.second_layout);
         uptodown = AnimationUtils.loadAnimation(this, R.anim.uptodown);
+    }
+
+
+    class MysBack extends AsyncTask<Context, Void, Context> {
+
+        @Override
+        protected void onPostExecute(Context aVoid) {
+            runL(aVoid);
+            super.onPostExecute(aVoid);
+        }
+
+        @Override
+        protected Context doInBackground(Context... voids) {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return voids[0];
+        }
     }
 }
