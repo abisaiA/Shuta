@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:layout_margin="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
         android:orientation="vertical">
 
         <android.support.v7.widget.CardView
             android:id="@+id/coursesCardView"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="320dp"
             android:layout_height="180dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="64dp"
@@ -33,9 +34,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Courses" />
+                    android:text="Courses"
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
@@ -54,17 +55,17 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/publishCourseResultCardView"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="320dp"
             android:layout_height="180dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="64dp"
@@ -75,9 +76,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Publish Course Results" />
+                    android:text="Publish Course Results"
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
@@ -111,6 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:gravity="center"
                 android:text="@string/copyright" />
         </LinearLayout>
 
