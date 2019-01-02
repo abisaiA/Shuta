@@ -2,6 +2,7 @@ package com.example.marigito.shuta;
 
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -43,7 +44,13 @@ public class AddCourseActivity extends AppCompatActivity {
                 } else if (courseWeight.isEmpty()) {
                     cousreWeightEditText.setError("Please enter course unit/credit");
                 } else {
-                    connection = DatabaseConfig.getConnection();
+                    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                    StrictMode.setThreadPolicy(policy);
+                    try {
+                        connection = new DatabaseConfig().getConnection();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                     String query = "INSERT INTO course(name,lecture_id,description,weight,prerequisite)  VALUES (?,?,?,?,?,?)";
                     try {
                         PreparedStatement preparedStatement = connection.prepareStatement(query);

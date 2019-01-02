@@ -1,1 +1,2 @@
-include ':app', ':mysql-connector-java-8.0.13'
+include ':app'
+        //':mysql-connector-java-8.0.13'
