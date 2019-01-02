@@ -16,6 +16,7 @@ public class StudentHomePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceBundle);
         setContentView(R.layout.student_homepage);
         initialize();
+      
 
         registerCourseCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,5 +55,6 @@ public class StudentHomePageActivity extends AppCompatActivity {
         profileSettingCardView = findViewById(R.id.profileSettingCardView);
         myPaymentsCardView = findViewById(R.id.myPaymentsCardView);
         courseResultCardView = findViewById(R.id.courseResultCardView);
+
     }
 }
