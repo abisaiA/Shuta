@@ -79,4 +79,5 @@ public class AddCourseActivity extends AppCompatActivity {
         addCourseButton = findViewById(R.id.addButton);
 
     }
+
 }
