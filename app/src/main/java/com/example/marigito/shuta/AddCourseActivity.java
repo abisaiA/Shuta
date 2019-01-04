@@ -34,6 +34,7 @@ public class AddCourseActivity extends AppCompatActivity {
 
                 if (courseCode.isEmpty()) {
                     courseCodeEditText.setError("Please enter Course Code");
+
                 } else if (courseName.isEmpty()) {
                     courseNameEditText.setError("Please enter course name ");
                 } else if (coursePrerequisite.isEmpty()) {
