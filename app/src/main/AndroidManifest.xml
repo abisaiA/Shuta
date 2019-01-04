@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".StudentHomePageActivity" />
         <activity android:name=".LoadingActivity" />
-        <activity android:name=".LecturerHomePageView" />
+        <activity android:name=".LecturerHomePageViewActivity" />
         <activity android:name=".LecturerCourseActivity" />
         <activity android:name=".AddCourseActivity" />
 

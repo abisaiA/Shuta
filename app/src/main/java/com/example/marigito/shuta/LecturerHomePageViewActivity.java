@@ -7,7 +7,7 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Toast;
 
-public class LecturerHomePageView extends Activity {
+public class LecturerHomePageViewActivity extends Activity {
     private CardView courseCardView, publishCourseResultCardView;
 
     @Override
@@ -29,7 +29,7 @@ public class LecturerHomePageView extends Activity {
         publishCourseResultCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LecturerHomePageView.this, "Publish Courses result ", Toast.LENGTH_LONG).show();
+                Toast.makeText(LecturerHomePageViewActivity.this, "Publish Courses result ", Toast.LENGTH_LONG).show();
             }
         });
     }

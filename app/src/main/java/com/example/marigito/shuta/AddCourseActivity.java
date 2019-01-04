@@ -16,7 +16,6 @@ import java.sql.SQLException;
 public class AddCourseActivity extends AppCompatActivity {
     private EditText courseCodeEditText, courseNameEditText, coursePrerequisiteEditText, courseDesrcriptionEditText, cousreWeightEditText;
     private Button addCourseButton;
-    public Connection connection = null;
 
     @Override
     public void onCreate(Bundle savedInstanceBundle) {
@@ -44,25 +43,7 @@ public class AddCourseActivity extends AppCompatActivity {
                 } else if (courseWeight.isEmpty()) {
                     cousreWeightEditText.setError("Please enter course unit/credit");
                 } else {
-                    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                    StrictMode.setThreadPolicy(policy);
-                    try {
-                        connection = new DatabaseConfig().getConnection();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                    String query = "INSERT INTO course(name,lecture_id,description,weight,prerequisite)  VALUES (?,?,?,?,?,?)";
-                    try {
-                        PreparedStatement preparedStatement = connection.prepareStatement(query);
-                        preparedStatement.setString(1, courseName);
-                        preparedStatement.setInt(2, 2);
-                        preparedStatement.setString(3, courseDescription);
-                        preparedStatement.setString(4, courseWeight);
-                        preparedStatement.setString(5, courseWeight);
-                        preparedStatement.setString(6, coursePrerequisite);
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+
 
                 }
 

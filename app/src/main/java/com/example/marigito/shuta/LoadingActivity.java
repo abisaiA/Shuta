@@ -41,7 +41,7 @@ public class LoadingActivity extends AppCompatActivity {
         } else {
 
             Toast.makeText(context, "UNAZINGUA KIJANA", Toast.LENGTH_LONG).show();
-            intent = new Intent(getApplicationContext(), LecturerHomePageView.class);
+            intent = new Intent(getApplicationContext(), LecturerHomePageViewActivity.class);
             startActivity(intent);
             finish();
 
